@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Simple ToDo List</h1>
+    </header>
+    <div class="main">
+        <div class="form">
+            <input type="text" class="form__text" id="nameToDo" placeholder="Name">
+            <input type="text" class="form__text" id="descriptionToDo" placeholder="Description">
+            <div class="form__category">
+            <label for="category">Category: </label>
+            <select name="category" class="selectCategory" id="category">
+                <option value="personal">Personal</option>
+                <option value="job">Job</option>
+                <option value="health">Health</option>
+                <option value="study">Study</option>
+            </select>
+            </div>
+            <input type="button" id="addToDo" value="Add">
+        </div>
+        <div class="order">
+            <div class="filter">
+                 <h3>Filter:</h3>
+                 <select name="filter" id="filterToDo">
+                     <option value="personal">Personal</option>
+                     <option value="job">Job</option>
+                     <option value="health">Health</option>
+                   <option value="study">Study</option>
+                </select>
+            </div>
+            <input type="button" value="order" id="orderToDo">
+        </div>
+        <div class="list" id="listToDo">
+            <h2 class="list__title">List</h2>
+            <div class="todo">
+                <div class="todo__header">
+                     <input type="checkbox" name="completed" class="todo__check">
+                     <h3 class="todo__title">Example title</h3>
+                </div>
+                <h4 class="todo__category">personal</h4>
+                <p class="todo__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a sem ante. Sed non nisi ullamcorper, consectetur sapien id, fermentum metus.</p>
+                <p class="todo__date">09/12/2021</p>
+                <div class="todo__buttons">
+                     <input type="button" value="Edit" class="todo__button todo__button--edit">
+                     <input type="button" value="Delet" class="todo__button todo__button--delet">
+                </div>
+            </div>
+        </div>
+    </div>
+    <template id="templateTodo">
+        <div class="todo">
+            <div class="todo__header">
+                 <input type="checkbox" name="completed" class="todo__check">
+                 <h3 class="todo__title"></h3>
+            </div>
+            <h4 class="todo__category"></h4>
+            <p class="todo__description"></p>
+            <p class="todo__date"></p>
+            <div class="todo__buttons">
+                 <input type="button" value="Edit" class="todo__button">
+                 <input type="button" value="Delet" class="todo__button">
+            </div>
+        </div>
+    </template>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>
