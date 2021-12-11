@@ -1,6 +1,6 @@
-#Todo List
+# Todo List
 
-##Componentes:
+## Componentes:
      - Formularios para ingresar el nombre de la tarea y descripción.
      - Formulario para seleccionar la categoría de la tarea.
      - Lista de tareas con check box para marcar como completada.
