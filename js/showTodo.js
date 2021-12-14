@@ -1,5 +1,6 @@
 import dateFormat from "./dateFormat.js";
 import assignId from "./assignId.js";
+import { getTarget } from "./app.js";
 
 const listToDo = document.getElementById('listToDo');
 
@@ -8,11 +9,13 @@ const templateToDo = document.getElementById('templateTodo').content;
 
 const showToDo = (nameTodo, description, category) => {
 
-    const idToDoTitle = assignId(9);
-    const idToDoDescription = assignId(10);
+    const idToDoCheck = assignId(8);
+    const idToDoEdit = assignId(9);
+    const idToDo = assignId(11);
 
-    templateToDo.querySelector('.todo__title').id = idToDoTitle;
-    templateToDo.querySelector('.todo__description').id = idToDoDescription;
+    templateToDo.querySelector('.todo').id = idToDo;
+    templateToDo.querySelector('.todo__check').id = idToDoCheck;
+    templateToDo.querySelector('.todo__button--edit').id = idToDoEdit;
 
     templateToDo.querySelector('.todo__title').textContent = nameTodo;
     templateToDo.querySelector('.todo__category').textContent = category;
@@ -25,8 +28,9 @@ const showToDo = (nameTodo, description, category) => {
 
     listToDo.appendChild(fragmentToDo);
 
-    console.log(idToDoDescription);
-    console.log(idToDoTitle);
+    const todo = document.querySelectorAll('.todo');
+
+    return todo.forEach(e => e.addEventListener('click', e => getTarget(e.target)));
 };
 
 export default showToDo;
