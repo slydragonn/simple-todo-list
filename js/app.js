@@ -3,8 +3,8 @@ import completed from "./completed.js";
 import editToDo from "./editToDo.js";
 import deletToDo from "./deletToDo.js";
 
-const nameToDo = document.getElementById('nameToDo');
-const descriptionToDo = document.getElementById('descriptionToDo');
+export const nameToDo = document.getElementById('nameToDo');
+export const descriptionToDo = document.getElementById('descriptionToDo');
 const categoryToDo = document.getElementById('category');
 
 export const addToDo = document.getElementById('addToDo');
@@ -14,10 +14,10 @@ const getToDo = () => {
     if(nameToDo.value && descriptionToDo.value){
         showToDo(nameToDo.value, descriptionToDo.value, categoryToDo.value);
 
-        nameToDo.value = '', descriptionToDo.value = '';
+        return nameToDo.value = '', descriptionToDo.value = '';
     }
     else{
-        alert('Falta un valor en "Name" ó "Description"');
+        return alert('Falta un valor en "Name" ó "Description"');
     }
 }
 
