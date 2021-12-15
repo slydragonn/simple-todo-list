@@ -11,11 +11,13 @@ const showToDo = (nameTodo, description, category) => {
 
     const idToDoCheck = assignId(8);
     const idToDoEdit = assignId(9);
+    const idToDoDelet = assignId(10);
     const idToDo = assignId(11);
 
     templateToDo.querySelector('.todo').id = idToDo;
     templateToDo.querySelector('.todo__check').id = idToDoCheck;
     templateToDo.querySelector('.todo__button--edit').id = idToDoEdit;
+    templateToDo.querySelector('.todo__button--delet').id = idToDoDelet;
 
     templateToDo.querySelector('.todo__title').textContent = nameTodo;
     templateToDo.querySelector('.todo__category').textContent = category;

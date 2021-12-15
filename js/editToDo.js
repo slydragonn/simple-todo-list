@@ -13,7 +13,7 @@ export default function editToDo(id){
 
         toDoTitle.innerHTML = `<input type="text" value="${valueTitle}" id="title"/>`;
         toDoDescription.innerHTML = `<input type="text" value="${valueDescription}" id="description" />`;
-        
+
         toDoEditButton.value = 'Apply';
         switchButton = !switchButton;
 

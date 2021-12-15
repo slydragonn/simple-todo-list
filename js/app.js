@@ -1,6 +1,7 @@
 import showToDo from "./showTodo.js";
 import completed from "./completed.js";
 import editToDo from "./editToDo.js";
+import deletToDo from "./deletToDo.js";
 
 const nameToDo = document.getElementById('nameToDo');
 const descriptionToDo = document.getElementById('descriptionToDo');
@@ -24,6 +25,7 @@ export function getTarget(target){
     if(target.id.length == 12) completed(target.parentNode.parentNode.id);
 
     if(target.id.length == 13) editToDo(target.parentNode.parentNode.id);
+    if(target.id.length == 14) deletToDo(target.parentNode.parentNode.id);
 }
 
 export default getToDo;
