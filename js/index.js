@@ -1,10 +1,31 @@
 import getToDo, { addToDo, descriptionToDo, nameToDo } from "./app.js";
+import showToDo from "./showTodo.js";
+import completed from "./completed.js";
+
+export let saveTodo = [];
+
+if(localStorage.length === 0){
+    saveTodo = [];
+}else{
+    for(let i = 0; i < localStorage.length; i++){
+         saveTodo.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+     }
+    saveTodo.forEach(el => {
+        showToDo(el.nameTodo, el.description, el.category, el.date, el.id);
+        if(el.check === true) completed(el.id, true);
+    });
+}
 
 addToDo.addEventListener('click', getToDo);
 
 descriptionToDo.addEventListener('keyup', (e) =>{
 
-    if(e.keyCode === 13) return getToDo();
+    if(e.keyCode === 13) {
+        return function () {
+            getToDo()
+            nameToDo.focus()
+        }();
+    }
 
     return;
 });
