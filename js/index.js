@@ -1,6 +1,11 @@
 import getToDo, { addToDo, descriptionToDo, nameToDo } from "./app.js";
 import showToDo from "./showTodo.js";
 import completed from "./completed.js";
+import filterTodo from "./filter.js";
+
+const filter = document.getElementById('filterToDo');
+const buttonFilter = document.getElementById('buttonFilter');
+buttonFilter.addEventListener('click', () => filterTodo(filter));
 
 export let saveTodo = [];
 
