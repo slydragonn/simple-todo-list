@@ -9,4 +9,4 @@
      - Boton para ordenar tareas de acuerdo a la fecha de creación.
      - Boton para eliminar o editar la tarea individualmente.
      - Filtro para mostrar tareas deacuerdo con la categoria.
-     - Guardar toda la informacion en el almacenamiento local. 
+     - Guardar toda la informacion en el almacenamiento local.
