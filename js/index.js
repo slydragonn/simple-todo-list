@@ -2,7 +2,7 @@ import getToDo, { addToDo, descriptionToDo, nameToDo } from "./app.js";
 import showToDo, { listToDo } from "./showTodo.js";
 import completed from "./completed.js";
 import filterTodo from "./filter.js";
-import orderToDo, { x } from "./orderToDo.js";
+import orderToDo from "./orderToDo.js";
 
 const filter = document.getElementById('filterToDo');
 const buttonFilter = document.getElementById('buttonFilter');
